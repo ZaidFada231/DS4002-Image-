@@ -153,22 +153,21 @@ This section provides a breakdown of the model's performance in classifying anim
 
 ### Strengths
 1. **High Performance on Distinct Classes**: 
-   - The model performed best on **Insects** with an F1-score of **0.75**, suggesting it excels at distinguishing visually unique classes.
+   - The model performed best on **Insects** with an F1-score of **0.75**, meaning it excel at distinguishing what I would assume are the most unique classes.
    - **Fish** also showed strong classification with an F1-score of **0.69**.
 
-2. **Balanced Classes**:
+2. **Balanced Performances in Medium Mammals and Large Omnivores and Herbivores**:
    - Classes like **Medium Mammals** and **Large Omnivores and Herbivores** showed consistent precision, recall, and F1-scores, indicating balanced performance.
 
 ### Weaknesses
 1. **Low Performance on Reptiles**:
-   - **Reptiles** exhibited the lowest F1-score of **0.53**, likely due to visual similarity with other classes.
+   - **Reptiles** exhibited the lowest F1-score of **0.53**.
    
 2. **Misclassification in Small Mammals**:
-   - A lower recall of **0.49** in **Small Mammals** indicates challenges in correctly identifying all samples of this class.
+   - A lower recall of **0.49** in **Small Mammals** indicates challenges in correctly identifying all samples of this class, possible mis labelling other mammal groups for this one.
 
 ## Conclusion
-While the model achieved an overall accuracy of **63%**, it fell short of the target hypothesis of **80%** accuracy. The class-wise evaluation highlights the model's strengths in identifying distinct classes but reveals challenges with visually similar or less represented categories. These insights provide a roadmap for future improvements, focusing on model tuning and enhanced data preprocessing.
-
+While the model achieved an overall accuracy of **63%**, it fell short of the target hypothesis of **80%** accuracy. The class-wise evaluation highlights the model's strengths in identifying distinct classes but reveals challenges with visually similar categories. 
 
 # References
 
