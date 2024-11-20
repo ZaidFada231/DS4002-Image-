@@ -20,14 +20,12 @@ This repository contains the code, data, and documentation for our project focus
 
 ```bash
 .
-├── README.md                # Project overview and instructions along with results at the bottom 
+├── README.md                # Project overview and instructions along with results at the bottom
 ├── LICENSE.md               # License information (MIT)
 ├── requirements.txt         # Python packages needed for the project
 ├── SCRIPTS/
-│   ├── 1-data.ipynb         # script to combine data over the years
-│   ├── 2-exploratory.ipynb  # Prelim data discobvery
-│   ├── 3-analysis.ipynb     # Detailed step-by-step analysis performed
-│   └── 4-stats.ipynb        # Detailed step-by-step takeaways and stats performed
+│   ├── 1-preprocessing.ipynb         # script to combine data over the years
+│   └── 2-analysis.ipynb     # Detailed step-by-step analysis performed
 ├── DATA/
 │   └── Data.md              # Steps to download dataset
 ├── OUTPUT/
@@ -44,7 +42,6 @@ This repository contains the code, data, and documentation for our project focus
   - `scikit-learn`
   - `matplotlib`
   - `tensorflow`
-  - `keras`
   - `seaborn`
 
 - **Platform**: Windows, macOS, or Linux
@@ -68,26 +65,18 @@ The dataset for this project is the CIFAR-100, a well-known image dataset source
    ```
 3. Download and prepare the data:
 
-   - Go to the `1-data.ipynb` and run the cell to create the combined-df that we use across this github
-   - The dataset will be in the `DATA/` folder
+   - Go to `/SCRIPTS/1-preproccesing.ipynb` and run the cells in there to see our preprocessing steps, such as mapping the images to the super group names
+   - Follow the comments in the cells and run each cell to see our exploratory-plots, or go to outputs to see them directly
 
-4. Run the exploratory plots:
+4. Run the analysis:
 
-   - Go to `/SCRIPTS/2-exploratory.ipynb`, follow the comments in the cells and run each cell to see our exploratory-plots, or go to outputs to see them directly!
+   - Go to `/SCRIPTS/2-analysis.ipynb`, follow the comments in the cells and run each cell to perform our analysis!
 
-5. Run the analysis:
-
-   - Go to `/SCRIPTS/3-analysis.ipynb`, follow the comments in the cells and run each cell to perform our analysis!
-
-6. Run the stats:
-
-   - Go to `/SCRIPTS/5-stats.ipynb`, follow the comments in the cells and run each cell to see where we got our takeaways from!
-
-7. Review the results:
-   - The model’s accuracy, precision, recall, and other performance metrics will be saved in the [results.md](OUTPUTS/results.md) file
+5. Review our results:
+   - The model’s accuracy, precision, recall, and other performance metrics will be saved down below in this read me!
    - Visualizations will be saved in the `OUTPUTS/plots/` directory.
 
-# Tornado Analysis Results
+# Classification of Animal Supergroup Results
 
 This document presents the findings of various statistical analyses conducted on tornado data, focusing on trends over time, differences in tornado severity, and changes in injury-causing tornadoes. The analyses compare the first 5 years of data to the last 5 years, using z-tests and chi-square tests to assess significant differences.
 
@@ -159,11 +148,10 @@ This document presents the findings of various statistical analyses conducted on
 
 The analyses reveal significant changes in the nature of tornado occurrences over time. While the overall frequency of tornadoes has not shown a statistically significant difference, the proportion of severe (F3 and above) and injury-causing tornadoes has decreased significantly over the years. Additionally, there has been a significant change in the distribution of tornado intensities, as evidenced by the chi-square test results.
 
-  # References
-  
-[1] National Centers for Environmental Information, “Storm Events Database CSV Files.” [Online]. Available: https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/. [Accessed: Oct. 31, 2024].
+# References
 
-[2] Yennhi95zz, “A Guide to Time Series Models in Machine Learning: Usage, Pros, and Cons,” Medium, Jul. 28, 2019. [Online]. Available: https://medium.com/@yennhi95zz/a-guide-to-time-series-models-in-machine-learning-usage-pros-and-cons-ac590a75e8b3. [Accessed: Oct. 31, 2024].
+[1] CIFAR-100 Dataset: https://www.cs.toronto.edu/~kriz/cifar.html
 
-[3] S. Berdiales, *Forecasting Models: ARIMA*, bookdown.org, 2020. [Online]. Available: https://bookdown.org/sergioberdiales/tfm-kschool_gijon_air_pollution/forecasting-models-arima.html. [Accessed: Oct. 31, 2024].
+[2] "Convolutional Neural Networks (CNNs)": https://www.analyticsvidhya.com/
 
+[3] "Developing CNN Models for Image Classification": https://machinelearningmastery.com/
