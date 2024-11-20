@@ -78,71 +78,63 @@ The dataset for this project is the CIFAR-100, a well-known image dataset source
 
 # Classification of Animal Supergroup Results
 
-This document presents the findings of various statistical analyses conducted on tornado data, focusing on trends over time, differences in tornado severity, and changes in injury-causing tornadoes. The analyses compare the first 5 years of data to the last 5 years, using z-tests and chi-square tests to assess significant differences.
+This document provides a summary of the training and validation results of our CNN model built to classify animal species using the CIFAR-100 dataset.
 
-## Proportion of Severe Tornadoes (F3 and Above)
+# **Model Training and Testing Summary**
 
-| Period  | Total Tornadoes | Violent Tornado Count |
-| ------- | --------------- | --------------------- |
-| First 5 | 6609            | 262                   |
-| Last 5  | 7436            | 972                   |
+## **Overview**
 
-**Two-sided z-test results**:
+This document provides a summary of the training and validation results of our CNN model built to classify animal species using the CIFAR-100 dataset.
 
-- **Z-score**: 19.0299
-- **P-value**: 0.0000
+---
 
-**Conclusion**: The proportion of tornadoes that are F3 or higher is significantly greater in the last 5 years compared to the first 5 years. The low p-value indicates that the difference is statistically significant.
+## **Training Metrics**
 
-## Proportion of Injury-Causing Tornadoes
+| **Epoch** | **Accuracy** | **Loss** | **Validation Accuracy** | **Validation Loss** |
+| --------- | ------------ | -------- | ----------------------- | ------------------- |
+| 1         | 20.80%       | 2.6052   | 25.22%                  | 1.9971              |
+| 2         | 31.45%       | 1.9603   | 40.18%                  | 1.6913              |
+| 3         | 35.64%       | 1.7937   | 38.04%                  | 1.7883              |
+| 10        | 51.21%       | 1.4005   | 45.11%                  | 1.5742              |
+| 20        | 61.67%       | 1.1078   | 51.76%                  | 1.4410              |
+| 30        | 68.06%       | 0.9121   | 57.20%                  | 1.3041              |
+| 50        | 75.75%       | 0.7098   | 59.24%                  | 1.3046              |
+| 70        | 79.21%       | 0.6032   | 61.20%                  | 1.3496              |
+| 100       | 83.10%       | 0.4909   | 60.44%                  | 1.4398              |
 
-| Period  | Total Tornadoes | Injury-causing Tornadoes |
-| ------- | --------------- | ------------------------ |
-| First 5 | 6609            | 609                      |
-| Last 5  | 7436            | 402                      |
+---
 
-**Two-sided z-test results**:
+## **Testing Metrics**
 
-- **Z-score**: -8.7166
-- **P-value**: 0.0000
+| **Metric**    | **Value** |
+| ------------- | --------- |
+| Test Accuracy | 61.22%    |
+| Test Loss     | 1.4135    |
 
-**Conclusion**: The proportion of tornadoes that caused injuries is significantly higher in the first 5 years compared to the last 5 years. The p-value of 0.0000 confirms that this difference is statistically significant.
+---
 
-## Tornado Counts by F-Scale
+## **Observations**
 
-| F_SCALE | First_5_Count | Last_5_Count |
-| ------- | ------------- | ------------ |
-| F0      | 4094          | 15909        |
-| F1      | 1657          | 8389         |
-| F2      | 596           | 2547         |
-| F3      | 213           | 782          |
-| F4      | 44            | 171          |
-| F5      | 5             | 19           |
+- Training accuracy improved steadily, achieving 83.10% by the 100th epoch.
+- Validation accuracy fluctuated, peaking at around 62%.
+- Testing results showed a **test accuracy** of **61.22%** and a **test loss** of **1.4135**, aligning with the validation performance.
 
-**Chi-square Test**:
+---
 
-- **Chi-square statistic**: 71.616
-- **Degrees of freedom**: 5
-- **P-value**: 4.7215e-14
+## **Key Takeaways**
 
-**Conclusion**: The differences in the distribution of tornado counts by F-Scale between the first and last 5 years are statistically significant, indicating a shift in the frequency of different tornado intensities over time.
+- The model demonstrated strong improvements in training accuracy, indicating effective learning.
+- Validation performance suggests potential overfitting after certain epochs, highlighting areas for hyperparameter tuning.
+- Further optimization of the architecture or dataset augmentation may enhance generalization and improve test results.
 
-## Trends in Tornado Frequency
+---
 
-| YEAR | First_5_Count | YEAR | Last_5_Count |
-| ---- | ------------- | ---- | ------------ |
-| 1998 | 1529          | 2019 | 1734         |
-| 1999 | 1520          | 2020 | 1251         |
-| 2000 | 1169          | 2021 | 1545         |
-| 2001 | 1351          | 2022 | 1383         |
-| 2002 | 1040          | 2023 | 1523         |
+## **Testing Metrics**
 
-**Two-sided z-test for Mean Frequency**:
-
-- **Z-score**: -1.3117
-- **P-value**: 0.2260
-
-**Conclusion**: The mean tornado frequency between the first 5 years and the last 5 years is not significantly different, as indicated by the p-value greater than 0.05.
+| **Metric**    | **Value** |
+| ------------- | --------- |
+| Test Accuracy | 61.22%    |
+| Test Loss     | 1.4135    |
 
 ## Summary
 
