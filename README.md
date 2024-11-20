@@ -28,8 +28,7 @@ This repository contains the code, data, and documentation for our project focus
 │   └── 2-analysis.ipynb     # Detailed step-by-step analysis performed
 ├── DATA/
 │   └── Data.md              # Steps to download dataset
-├── OUTPUT/
-│   └── plots/              # Figures generated during prelim data discovery
+├── OUTPUT/             # Figures generated during prelim data discovery
 ```
 
 ## Software and Platform
@@ -119,18 +118,57 @@ This document provides a summary of the training and validation results of our C
 - Validation performance suggests potential overfitting after certain epochs, highlighting areas for hyperparameter tuning.
 - Further optimization of the architecture or dataset augmentation may enhance generalization and improve test results.
 
-## **Testing Metrics**
+![Model Accuracy Plot](./Outputs/training-validation-accuracy.jpg "Training and Validation Accuracy")
 
-| **Metric**    | **Value** |
-| ------------- | --------- |
-| Test Accuracy | 61.22%    |
-| Test Loss     | 1.4135    |
+# Results Analysis
 
-![Model Accuracy Plot](./OUTPUTS/training-validation-accuracy.jpg "Training and Validation Accuracy")
+## Classification Performance by Supergroup
 
-## Summary
+This section provides a breakdown of the model's performance in classifying animal supergroups. The metrics include precision, recall, F1-score, and support for each supergroup.
 
-The analyses reveal significant changes in the nature of tornado occurrences over time. While the overall frequency of tornadoes has not shown a statistically significant difference, the proportion of severe (F3 and above) and injury-causing tornadoes has decreased significantly over the years. Additionally, there has been a significant change in the distribution of tornado intensities, as evidenced by the chi-square test results.
+| **Supergroup**                 | **Precision** | **Recall** | **F1-Score** | **Support** |
+|--------------------------------|---------------|------------|--------------|-------------|
+| Aquatic Mammals                | 0.57          | 0.64       | 0.60         | 484         |
+| Fish                           | 0.70          | 0.67       | 0.69         | 508         |
+| Insects                        | 0.78          | 0.72       | 0.75         | 516         |
+| Large Carnivores               | 0.69          | 0.56       | 0.62         | 486         |
+| Large Omnivores and Herbivores | 0.67          | 0.66       | 0.67         | 471         |
+| Medium Mammals                 | 0.66          | 0.66       | 0.66         | 509         |
+| Non-Insect Invertebrates       | 0.66          | 0.62       | 0.64         | 500         |
+| Reptiles                       | 0.43          | 0.69       | 0.53         | 510         |
+| Small Mammals                  | 0.73          | 0.49       | 0.59         | 516         |
+
+### **Overall Metrics**
+- **Accuracy**: 0.63
+- **Macro Average**:
+  - Precision: 0.66
+  - Recall: 0.63
+  - F1-Score: 0.64
+- **Weighted Average**:
+  - Precision: 0.66
+  - Recall: 0.63
+  - F1-Score: 0.64
+
+## Key Insights
+
+### Strengths
+1. **High Performance on Distinct Classes**: 
+   - The model performed best on **Insects** with an F1-score of **0.75**, suggesting it excels at distinguishing visually unique classes.
+   - **Fish** also showed strong classification with an F1-score of **0.69**.
+
+2. **Balanced Classes**:
+   - Classes like **Medium Mammals** and **Large Omnivores and Herbivores** showed consistent precision, recall, and F1-scores, indicating balanced performance.
+
+### Weaknesses
+1. **Low Performance on Reptiles**:
+   - **Reptiles** exhibited the lowest F1-score of **0.53**, likely due to visual similarity with other classes.
+   
+2. **Misclassification in Small Mammals**:
+   - A lower recall of **0.49** in **Small Mammals** indicates challenges in correctly identifying all samples of this class.
+
+## Conclusion
+While the model achieved an overall accuracy of **63%**, it fell short of the target hypothesis of **80%** accuracy. The class-wise evaluation highlights the model's strengths in identifying distinct classes but reveals challenges with visually similar or less represented categories. These insights provide a roadmap for future improvements, focusing on model tuning and enhanced data preprocessing.
+
 
 # References
 
