@@ -28,8 +28,7 @@ This repository contains the code, data, and documentation for our project focus
 │   └── 2-analysis.ipynb     # Detailed step-by-step analysis performed
 ├── DATA/
 │   └── Data.md              # Steps to download dataset
-├── OUTPUT/
-│   └── plots/              # Figures generated during prelim data discovery
+├── OUTPUT/             # Figures generated during prelim data discovery
 ```
 
 ## Software and Platform
@@ -126,7 +125,7 @@ This document provides a summary of the training and validation results of our C
 | Test Accuracy | 61.22%    |
 | Test Loss     | 1.4135    |
 
-![Model Accuracy Plot](./OUTPUTS/training-validation-accuracy.jpg "Training and Validation Accuracy")
+![Model Accuracy Plot](./Outputs/training-validation-accuracy.jpg "Training and Validation Accuracy")
 
 ## Summary
 
