@@ -126,6 +126,8 @@ This document provides a summary of the training and validation results of our C
 | Test Accuracy | 61.22%    |
 | Test Loss     | 1.4135    |
 
+![Model Accuracy Plot](./OUTPUTS/training-validation-accuracy.jpg "Training and Validation Accuracy")
+
 ## Summary
 
 The analyses reveal significant changes in the nature of tornado occurrences over time. While the overall frequency of tornadoes has not shown a statistically significant difference, the proportion of severe (F3 and above) and injury-causing tornadoes has decreased significantly over the years. Additionally, there has been a significant change in the distribution of tornado intensities, as evidenced by the chi-square test results.
