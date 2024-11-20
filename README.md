@@ -86,8 +86,6 @@ This document provides a summary of the training and validation results of our C
 
 This document provides a summary of the training and validation results of our CNN model built to classify animal species using the CIFAR-100 dataset.
 
----
-
 ## **Training Metrics**
 
 | **Epoch** | **Accuracy** | **Loss** | **Validation Accuracy** | **Validation Loss** |
@@ -102,8 +100,6 @@ This document provides a summary of the training and validation results of our C
 | 70        | 79.21%       | 0.6032   | 61.20%                  | 1.3496              |
 | 100       | 83.10%       | 0.4909   | 60.44%                  | 1.4398              |
 
----
-
 ## **Testing Metrics**
 
 | **Metric**    | **Value** |
@@ -111,23 +107,17 @@ This document provides a summary of the training and validation results of our C
 | Test Accuracy | 61.22%    |
 | Test Loss     | 1.4135    |
 
----
-
 ## **Observations**
 
 - Training accuracy improved steadily, achieving 83.10% by the 100th epoch.
 - Validation accuracy fluctuated, peaking at around 62%.
 - Testing results showed a **test accuracy** of **61.22%** and a **test loss** of **1.4135**, aligning with the validation performance.
 
----
-
 ## **Key Takeaways**
 
 - The model demonstrated strong improvements in training accuracy, indicating effective learning.
 - Validation performance suggests potential overfitting after certain epochs, highlighting areas for hyperparameter tuning.
 - Further optimization of the architecture or dataset augmentation may enhance generalization and improve test results.
-
----
 
 ## **Testing Metrics**
 
