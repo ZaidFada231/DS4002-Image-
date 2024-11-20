@@ -118,18 +118,7 @@ This document provides a summary of the training and validation results of our C
 - Validation performance suggests potential overfitting after certain epochs, highlighting areas for hyperparameter tuning.
 - Further optimization of the architecture or dataset augmentation may enhance generalization and improve test results.
 
-## **Testing Metrics**
-
-| **Metric**    | **Value** |
-| ------------- | --------- |
-| Test Accuracy | 61.22%    |
-| Test Loss     | 1.4135    |
-
 ![Model Accuracy Plot](./Outputs/training-validation-accuracy.jpg "Training and Validation Accuracy")
-
-## Summary
-
-The analyses reveal significant changes in the nature of tornado occurrences over time. While the overall frequency of tornadoes has not shown a statistically significant difference, the proportion of severe (F3 and above) and injury-causing tornadoes has decreased significantly over the years. Additionally, there has been a significant change in the distribution of tornado intensities, as evidenced by the chi-square test results.
 
 # References
 
